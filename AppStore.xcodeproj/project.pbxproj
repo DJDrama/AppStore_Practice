@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,9 @@
 		225026FF252E9CAA002DB18A /* ArcadePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225026FE252E9CAA002DB18A /* ArcadePage.swift */; };
 		22502704252E9CB0002DB18A /* SearchPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22502703252E9CB0002DB18A /* SearchPage.swift */; };
 		22502709252E9CB6002DB18A /* TabBarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22502708252E9CB6002DB18A /* TabBarPage.swift */; };
+		22502711252EA69F002DB18A /* FeaturedPostPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22502710252EA69F002DB18A /* FeaturedPostPage.swift */; };
+		22502719252EC84A002DB18A /* HorizontalScrollPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22502718252EC84A002DB18A /* HorizontalScrollPage.swift */; };
+		2250272225304BB7002DB18A /* Pages in Frameworks */ = {isa = PBXBuildFile; productRef = 2250272125304BB7002DB18A /* Pages */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,8 @@
 		225026FE252E9CAA002DB18A /* ArcadePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcadePage.swift; sourceTree = "<group>"; };
 		22502703252E9CB0002DB18A /* SearchPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPage.swift; sourceTree = "<group>"; };
 		22502708252E9CB6002DB18A /* TabBarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPage.swift; sourceTree = "<group>"; };
+		22502710252EA69F002DB18A /* FeaturedPostPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedPostPage.swift; sourceTree = "<group>"; };
+		22502718252EC84A002DB18A /* HorizontalScrollPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2250272225304BB7002DB18A /* Pages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +117,8 @@
 				225026C3252E9C72002DB18A /* ContentView.swift */,
 				225026EF252E9C94002DB18A /* TodayPage.swift */,
 				225026F4252E9C9F002DB18A /* GamesPage.swift */,
+				22502718252EC84A002DB18A /* HorizontalScrollPage.swift */,
+				22502710252EA69F002DB18A /* FeaturedPostPage.swift */,
 				225026F9252E9CA5002DB18A /* AppsPage.swift */,
 				225026FE252E9CAA002DB18A /* ArcadePage.swift */,
 				22502703252E9CB0002DB18A /* SearchPage.swift */,
@@ -164,6 +172,9 @@
 			dependencies = (
 			);
 			name = AppStore;
+			packageProductDependencies = (
+				2250272125304BB7002DB18A /* Pages */,
+			);
 			productName = AppStore;
 			productReference = 225026BE252E9C72002DB18A /* AppStore.app */;
 			productType = "com.apple.product-type.application";
@@ -235,6 +246,9 @@
 				Base,
 			);
 			mainGroup = 225026B5252E9C72002DB18A;
+			packageReferences = (
+				2250272025304BB6002DB18A /* XCRemoteSwiftPackageReference "Pages" */,
+			);
 			productRefGroup = 225026BF252E9C72002DB18A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -282,8 +296,10 @@
 				225026C2252E9C72002DB18A /* AppStoreApp.swift in Sources */,
 				225026F0252E9C94002DB18A /* TodayPage.swift in Sources */,
 				22502709252E9CB6002DB18A /* TabBarPage.swift in Sources */,
+				22502719252EC84A002DB18A /* HorizontalScrollPage.swift in Sources */,
 				22502704252E9CB0002DB18A /* SearchPage.swift in Sources */,
 				225026FF252E9CAA002DB18A /* ArcadePage.swift in Sources */,
+				22502711252EA69F002DB18A /* FeaturedPostPage.swift in Sources */,
 				225026FA252E9CA5002DB18A /* AppsPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -604,6 +620,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2250272025304BB6002DB18A /* XCRemoteSwiftPackageReference "Pages" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nachonavarro/Pages";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2250272125304BB7002DB18A /* Pages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2250272025304BB6002DB18A /* XCRemoteSwiftPackageReference "Pages" */;
+			productName = Pages;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 225026B6252E9C72002DB18A /* Project object */;
 }

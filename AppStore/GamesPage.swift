@@ -7,9 +7,13 @@
 
 import Foundation
 import SwiftUI
+import Pages
 
 struct GamesView: View {
     var gameStorage = GameStorage()
+    var numOfRows = 3
+    @State
+    var currentPage=0
     var body: some View {
         ScrollView{
             VStack{
@@ -24,8 +28,7 @@ struct GamesView: View {
                     
                 }.padding([.leading, .trailing, .top])
                 
-                ScrollView(.horizontal, showsIndicators: false, content : {
-                    HStack{
+                Pages(currentPage: $currentPage, bounce: true, hasControl: false, pages: {
                         FeaturedPostView(captionText: "New Update", titleText: "Instruments FreePlay", subTitleText: "Play Any Instrument You Want!", image: "sims")
                         
                         FeaturedPostView(captionText: "New Update", titleText: "Instruments FreePlay", subTitleText: "Play Any Instrument You Want!", image: "sims")
@@ -33,9 +36,15 @@ struct GamesView: View {
                         FeaturedPostView(captionText: "New Update", titleText: "Instruments FreePlay", subTitleText: "Play Any Instrument You Want!", image: "sims")
                         
                         FeaturedPostView(captionText: "New Update", titleText: "Instruments FreePlay", subTitleText: "Play Any Instrument You Want!", image: "sims")
-                    }
+                }).frame(height: 350, alignment: .center)
+                    
+                Divider()
+                
+                ForEach(0..<3, content : {
+                    row in
+                    HorizontalScrollView(items: self.gameStorage.thisWeeksGames)
                 })
-                HorizontalScrollView(items: self.gameStorage.thisWeeksGames)
+                
             }
         }
     }
